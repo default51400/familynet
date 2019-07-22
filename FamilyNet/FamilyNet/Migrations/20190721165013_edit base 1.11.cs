@@ -5,8 +5,7 @@ namespace FamilyNet.Migrations
 {
     public partial class editbase111 : Migration
     {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
+        protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropForeignKey(
                 name: "FK_CharityMakers_Adress_AddressID",
                 table: "CharityMakers");
@@ -24,8 +23,7 @@ namespace FamilyNet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Address",
-                columns: table => new
-                {
+                columns: table => new {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Country = table.Column<string>(nullable: false),
@@ -34,10 +32,21 @@ namespace FamilyNet.Migrations
                     Street = table.Column<string>(nullable: false),
                     House = table.Column<string>(nullable: false)
                 },
-                constraints: table =>
-                {
+                constraints: table => {
                     table.PrimaryKey("PK_Address", x => x.ID);
                 });
+
+            migrationBuilder.AddColumn<float>(
+                name: "MapCoordX",
+                table: "Orphanages",
+                nullable: true
+                );
+
+            migrationBuilder.AddColumn<float>(
+                name: "MapCoordY",
+                table: "Orphanages",
+                nullable: true
+                );
 
             migrationBuilder.CreateIndex(
                 name: "IX_Address_City",
@@ -69,8 +78,7 @@ namespace FamilyNet.Migrations
                 onDelete: ReferentialAction.SetNull);
         }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        protected override void Down(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropForeignKey(
                 name: "FK_CharityMakers_Address_AddressID",
                 table: "CharityMakers");
@@ -88,8 +96,7 @@ namespace FamilyNet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Adress",
-                columns: table => new
-                {
+                columns: table => new {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     City = table.Column<string>(nullable: false),
@@ -98,8 +105,7 @@ namespace FamilyNet.Migrations
                     Region = table.Column<string>(nullable: false),
                     Street = table.Column<string>(nullable: false)
                 },
-                constraints: table =>
-                {
+                constraints: table => {
                     table.PrimaryKey("PK_Adress", x => x.ID);
                 });
 

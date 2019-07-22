@@ -217,6 +217,10 @@ namespace FamilyNet.Migrations
 
                     b.Property<float>("Rating");
 
+                    b.Property<float>("X");
+
+                    b.Property<float>("Y");
+
                     b.HasKey("ID");
 
                     b.HasIndex("AdressID")

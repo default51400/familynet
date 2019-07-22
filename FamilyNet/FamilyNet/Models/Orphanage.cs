@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FamilyNet.Models
 {
-    public class Orphanage : IEntity
+    public class Orphanage : IEntity, IDisposable
     {
         public int ID { get; set; }
         //[Required(ErrorMessage = "Please enter a name")]
@@ -27,6 +27,8 @@ namespace FamilyNet.Models
 
         public virtual ICollection<Orphan> Orphans { get; set; }
 
+        public float MapCoordX { get; set; }
+        public float MapCoordY { get; set; }
 
         public static void CopyState(Orphanage receiver, Orphanage sender)
         {
@@ -38,6 +40,10 @@ namespace FamilyNet.Models
             receiver.Adress.House = sender.Adress.House;
             receiver.Adress.Region = sender.Adress.Region;
             receiver.Adress.Street = sender.Adress.Street;
+        }
+
+        public void Dispose() {
+            throw new NotImplementedException();
         }
     }
     public enum SortStateOrphanages
