@@ -48,87 +48,9 @@
 
 
 
+@*<partial name="~/Views/Orphanages/BestOfThree.cshtml" />*@
+@await Html.PartialAsync("BestOfThree", ViewData["Best"]);
 
-
-<!-- Modal -->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="img-thumbnail">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <img src="images/lg-1.jpg" class="img-responsive" alt="">
-            </div>
-            <div class="modal-content">
-                Контент
-            </div>
-            <button type="button" class="btn btn-primary">Отозваться</button>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="img-thumbnail">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <img src="images/lg-2.jpg" class="img-responsive" alt="">
-            </div>
-            <div class="modal-content">
-                Контент
-            </div>
-            <button type="button" class="btn btn-primary">Отозваться</button>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-
-            <div class="img-thumbnail">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <img src="images/lg-3.jpg" class="img-responsive" alt="">
-            </div>
-            <div class="modal-content">
-                Контент
-            </div>
-            <button type="button" class="btn btn-primary">Отозваться</button>
-        </div>
-    </div>
-</div>
-
-
-<div class="align-content-lg-center" style="padding-top:100px; padding-bottom:100px">
-    <div class="card-group">
-        <div class="card">
-            <button type="button" data-toggle="modal" data-target="#myModal1">
-                <img src="images/lg-1.jpg" class="img-responsive" alt="">
-            </button>
-            <div class="card-body">
-                <h5 class="card-title">Дом номер 1</h5>
-                <p class="card-text">Хороший</p>
-            </div>
-        </div>
-        <div class="card">
-            <button type="button" data-toggle="modal" data-target="#myModal2">
-                <img src="images/lg-2.jpg" class="img-responsive" alt="">
-            </button>
-            <div class="card-body">
-                <h5 class="card-title">Дом номер 2</h5>
-                <p class="card-text">Классный</p>
-            </div>
-        </div>
-        <div class="card">
-            <button type="button" data-toggle="modal" data-target="#myModal3">
-                <img src="images/lg-3.jpg" class="img-responsive" alt="">
-            </button>
-            <div class="card-body">
-                <h5 class="card-title">Дом номер 3</h5>
-                <p class="card-text">Супер классный</p>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <script>

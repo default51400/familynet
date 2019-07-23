@@ -169,12 +169,5 @@ namespace FamilyNet.Controllers
         private bool OrphanageExists(int id) =>
             _unitOfWorkAsync.Orphanages.GetById(id) != null;
 
-        public IActionResult BestOfThree()
-        {
-            ViewBag.bestofthree = _unitOfWorkAsync.Orphanages.GetAll()
-              .OrderByDescending(c => c.Rating)
-              .Take(3);
-            return View();
-        }
     }
 }
