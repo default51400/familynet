@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FamilyNet.Models
 {
-    public class Orphanage : IEntity, IDisposable
+    public class Orphanage : IEntity
     {
         public int ID { get; set; }
         //[Required(ErrorMessage = "Please enter a name")]
@@ -42,9 +42,7 @@ namespace FamilyNet.Models
             receiver.Adress.Street = sender.Adress.Street;
         }
 
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        
     }
     public enum SortStateOrphanages
     {

@@ -56,23 +56,23 @@
 //    {"loc":[41.239190,13.032145], "title":"white"}
 //];
 
-var map = new L.Map('map', {zoom: 9, center: new L.latLng(data[0].loc) });	//set center from first location
+//var map = new L.Map('map', {zoom: 9, center: new L.latLng(data[0].loc) });	//set center from first location
 
-map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
+//map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
 
-var markersLayer = new L.LayerGroup();	//layer contain searched elements
+//var markersLayer = new L.LayerGroup();	//layer contain searched elements
 
-map.addLayer(markersLayer);
+//map.addLayer(markersLayer);
 
-var controlSearch = new L.Control.Search({
-    position:'topright',		
-    layer: markersLayer,
-    initial: false,
-    zoom: 12,
-    marker: false
-});
+//var controlSearch = new L.Control.Search({
+//    position:'topright',		
+//    layer: markersLayer,
+//    initial: false,
+//    zoom: 12,
+//    marker: false
+//});
 
-map.addControl( controlSearch );
+//map.addControl( controlSearch );
 
 //////////////populate map with markers from sample data
 //for(i in data) {
